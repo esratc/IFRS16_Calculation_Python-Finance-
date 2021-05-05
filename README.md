@@ -1,5 +1,19 @@
 # IFRS16_Calculation_Python-Finance-
 
+
+
+#I aimed to calculate IFRS16 effects of contracts in Python. 
+#Function calculates the Balance Sheet(Fixed Asset, Lease Liability), P&L (Depreciation Expense, Interest Expense), Cash Flow (Interest Paid, Lease Paid, Interest Accrued)
+
+
+
+
+
+
+
+
+
+
 def IFRS(m):
     import pandas as pd
     import numpy as np
