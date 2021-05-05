@@ -9,7 +9,7 @@
     def IFRS(m):
     import pandas as pd
     import numpy as np
-    df = pd.read_excel (r'C:\deneme.xlsx')
+ 
     df1 = pd.read_excel (r'C:\IFRS16_input_file.xlsx')
     month_end = pd.date_range(df1['Contract Start Date'][m],df1['Contract End Date'][m],  freq=pd.offsets.MonthEnd(1))
     month_start = pd.date_range(df1['Contract Start Date'][m],df1['Contract End Date'][m],  freq=pd.offsets.MonthBegin(1))
