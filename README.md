@@ -5,16 +5,8 @@
 #I aimed to calculate IFRS16 effects of contracts in Python. 
 #Function calculates the Balance Sheet(Fixed Asset, Lease Liability), P&L (Depreciation Expense, Interest Expense), Cash Flow (Interest Paid, Lease Paid, Interest Accrued)
 
-
-
-
-
-
-
-
-
-
-def IFRS(m):
+    
+    def IFRS(m):
     import pandas as pd
     import numpy as np
     df = pd.read_excel (r'C:\deneme.xlsx')
@@ -22,6 +14,7 @@ def IFRS(m):
     month_end = pd.date_range(df1['Contract Start Date'][m],df1['Contract End Date'][m],  freq=pd.offsets.MonthEnd(1))
     month_start = pd.date_range(df1['Contract Start Date'][m],df1['Contract End Date'][m],  freq=pd.offsets.MonthBegin(1))
     month_middle = pd.date_range(df1['Contract Start Date'][m],df1['Contract End Date'][m],  freq=pd.offsets.MonthBegin(1)) +pd.DateOffset(days=(df1['Payment Date'][m] - df1['Contract Start Date'][m]).total_seconds()/86400)
+    
     
     month_end = month_end.to_frame(index = False)
     month_start= month_start.to_frame(index = False)
